@@ -15,6 +15,14 @@
 		681A179623FAA08000C54C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681A179423FAA08000C54C4F /* LaunchScreen.storyboard */; };
 		681A17A123FAA08000C54C4F /* UIPlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681A17A023FAA08000C54C4F /* UIPlaygroundTests.swift */; };
 		681A17AC23FAA08100C54C4F /* UIPlaygroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681A17AB23FAA08100C54C4F /* UIPlaygroundUITests.swift */; };
+		681A17BA23FAA1CB00C54C4F /* NavigationBarMoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681A17B923FAA1CB00C54C4F /* NavigationBarMoveViewController.swift */; };
+		681A17BC23FAA64500C54C4F /* NavigationCustomBackButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681A17BB23FAA64500C54C4F /* NavigationCustomBackButtonViewController.swift */; };
+		68A79CB323FBB74F00840AE7 /* Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CAB23FBB74F00840AE7 /* Corner.swift */; };
+		68A79CB423FBB74F00840AE7 /* NotchKitWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CAC23FBB74F00840AE7 /* NotchKitWindow.swift */; };
+		68A79CB523FBB74F00840AE7 /* CGRect+Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CAE23FBB74F00840AE7 /* CGRect+Corners.swift */; };
+		68A79CB623FBB74F00840AE7 /* CGRect+InitWithCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CAF23FBB74F00840AE7 /* CGRect+InitWithCorners.swift */; };
+		68A79CB723FBB74F00840AE7 /* CGRect+Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CB023FBB74F00840AE7 /* CGRect+Insets.swift */; };
+		68A79CB823FBB74F00840AE7 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CB123FBB74F00840AE7 /* CornerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		681A17A723FAA08000C54C4F /* UIPlaygroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIPlaygroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		681A17AB23FAA08100C54C4F /* UIPlaygroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPlaygroundUITests.swift; sourceTree = "<group>"; };
 		681A17AD23FAA08100C54C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		681A17B923FAA1CB00C54C4F /* NavigationBarMoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarMoveViewController.swift; sourceTree = "<group>"; };
+		681A17BB23FAA64500C54C4F /* NavigationCustomBackButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCustomBackButtonViewController.swift; sourceTree = "<group>"; };
+		68A79CAB23FBB74F00840AE7 /* Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Corner.swift; sourceTree = "<group>"; };
+		68A79CAC23FBB74F00840AE7 /* NotchKitWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotchKitWindow.swift; sourceTree = "<group>"; };
+		68A79CAE23FBB74F00840AE7 /* CGRect+Corners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Corners.swift"; sourceTree = "<group>"; };
+		68A79CAF23FBB74F00840AE7 /* CGRect+InitWithCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+InitWithCorners.swift"; sourceTree = "<group>"; };
+		68A79CB023FBB74F00840AE7 /* CGRect+Insets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Insets.swift"; sourceTree = "<group>"; };
+		68A79CB123FBB74F00840AE7 /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +95,7 @@
 		681A177D23FAA07E00C54C4F = {
 			isa = PBXGroup;
 			children = (
+				68A79CA823FBB74F00840AE7 /* NotchKit */,
 				681A178823FAA07E00C54C4F /* UIPlayground */,
 				681A179F23FAA08000C54C4F /* UIPlaygroundTests */,
 				681A17AA23FAA08100C54C4F /* UIPlaygroundUITests */,
@@ -103,6 +120,8 @@
 				681A178B23FAA07E00C54C4F /* SceneDelegate.swift */,
 				681A178D23FAA07E00C54C4F /* ViewController.swift */,
 				681A178F23FAA07E00C54C4F /* Main.storyboard */,
+				681A17B923FAA1CB00C54C4F /* NavigationBarMoveViewController.swift */,
+				681A17BB23FAA64500C54C4F /* NavigationCustomBackButtonViewController.swift */,
 				681A179223FAA08000C54C4F /* Assets.xcassets */,
 				681A179423FAA08000C54C4F /* LaunchScreen.storyboard */,
 				681A179723FAA08000C54C4F /* Info.plist */,
@@ -126,6 +145,36 @@
 				681A17AD23FAA08100C54C4F /* Info.plist */,
 			);
 			path = UIPlaygroundUITests;
+			sourceTree = "<group>";
+		};
+		68A79CA823FBB74F00840AE7 /* NotchKit */ = {
+			isa = PBXGroup;
+			children = (
+				68A79CAA23FBB74F00840AE7 /* Types */,
+				68A79CAC23FBB74F00840AE7 /* NotchKitWindow.swift */,
+				68A79CAD23FBB74F00840AE7 /* Extensions */,
+				68A79CB123FBB74F00840AE7 /* CornerView.swift */,
+			);
+			name = NotchKit;
+			path = UIPlayground/NotchKit;
+			sourceTree = "<group>";
+		};
+		68A79CAA23FBB74F00840AE7 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				68A79CAB23FBB74F00840AE7 /* Corner.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		68A79CAD23FBB74F00840AE7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				68A79CAE23FBB74F00840AE7 /* CGRect+Corners.swift */,
+				68A79CAF23FBB74F00840AE7 /* CGRect+InitWithCorners.swift */,
+				68A79CB023FBB74F00840AE7 /* CGRect+Insets.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,8 +309,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				681A178E23FAA07E00C54C4F /* ViewController.swift in Sources */,
+				681A17BC23FAA64500C54C4F /* NavigationCustomBackButtonViewController.swift in Sources */,
 				681A178A23FAA07E00C54C4F /* AppDelegate.swift in Sources */,
+				68A79CB623FBB74F00840AE7 /* CGRect+InitWithCorners.swift in Sources */,
+				68A79CB823FBB74F00840AE7 /* CornerView.swift in Sources */,
 				681A178C23FAA07E00C54C4F /* SceneDelegate.swift in Sources */,
+				68A79CB323FBB74F00840AE7 /* Corner.swift in Sources */,
+				68A79CB423FBB74F00840AE7 /* NotchKitWindow.swift in Sources */,
+				68A79CB523FBB74F00840AE7 /* CGRect+Corners.swift in Sources */,
+				681A17BA23FAA1CB00C54C4F /* NavigationBarMoveViewController.swift in Sources */,
+				68A79CB723FBB74F00840AE7 /* CGRect+Insets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

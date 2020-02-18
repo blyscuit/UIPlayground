@@ -8,23 +8,36 @@
 
 import UIKit
 
+class CustomBackButtonNavController: UINavigationController {
+}
+
 class NavigationCustomBackButtonViewController: UIViewController {
+    @IBOutlet weak var sliderY: UISlider!
+    @IBOutlet weak var sliderX: UISlider!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        sliderX.addTarget(self, action: #selector(slider1Move(_:)), for: .valueChanged)
+        sliderY.addTarget(self, action: #selector(slider1Move(_:)), for: .valueChanged)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func slider1Move(_ sender: Any) {
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [CustomBackButtonNavController.self]).setBackButtonTitlePositionAdjustment(UIOffset(horizontal: CGFloat(((sliderX.value * 2.0) - 1) * 10), vertical: CGFloat(((sliderY.value * 2.0) - 1) * 10)), for: .default)
+        navigationController?.view.layoutSubviews()
+        
     }
-    */
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+
+        // For Back button customization, setup the custom image for UINavigationBar inside CustomBackButtonNavController.
+        let backButtonBackgroundImage = UIImage(systemName: "list.bullet")
+        let barAppearance =
+            UINavigationBar.appearance(whenContainedInInstancesOf: [CustomBackButtonNavController.self])
+        barAppearance.backIndicatorImage = backButtonBackgroundImage
+        barAppearance.backIndicatorTransitionMaskImage = backButtonBackgroundImage
+
+        
+    }
 
 }

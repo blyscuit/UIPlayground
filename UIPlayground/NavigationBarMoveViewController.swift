@@ -10,21 +10,19 @@ import UIKit
 
 class NavigationBarMoveViewController: UIViewController {
 
+    @IBOutlet weak var slider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.title = "Move This"
+        let backBarButtton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        backBarButtton.customView?.backgroundColor = .systemBlue
+        navigationItem.backBarButtonItem = backBarButtton
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func slider1Move(_ sender: Any) {
+        navigationController?.navigationBar.setTitleVerticalPositionAdjustment(CGFloat(((slider.value * 2.0) - 1) * 10), for: .default)
+        
     }
-    */
-
 }
