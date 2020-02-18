@@ -9,6 +9,17 @@
 import UIKit
 
 class CustomBackButtonNavController: UINavigationController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // For Back button customization, setup the custom image for UINavigationBar inside CustomBackButtonNavController.
+        
+    }
+    
+    func moveButtonTitle(x: Float, y: Float) {
+//        UIBarButtonItem.appearance(whenContainedInInstancesOf: [CustomBackButtonNavController.self]).setBackButtonTitlePositionAdjustment(UIOffset(horizontal: CGFloat(((x * 2.0) - 1) * 10), vertical: CGFloat(((y * 2.0) - 1) * 10)), for: UIBarMetrics.default)
+//        navigationItem.backBarButtonItem?.setTitlePositionAdjustment(UIOffset(horizontal: CGFloat(((x * 2.0) - 1) * 10), vertical: CGFloat(((y * 2.0) - 1) * 10)), for: .default)
+    }
 }
 
 class NavigationCustomBackButtonViewController: UIViewController {
@@ -22,22 +33,15 @@ class NavigationCustomBackButtonViewController: UIViewController {
     }
     
     @IBAction func slider1Move(_ sender: Any) {
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [CustomBackButtonNavController.self]).setBackButtonTitlePositionAdjustment(UIOffset(horizontal: CGFloat(((sliderX.value * 2.0) - 1) * 10), vertical: CGFloat(((sliderY.value * 2.0) - 1) * 10)), for: .default)
-        navigationController?.view.layoutSubviews()
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [CustomBackButtonNavController.self]).setBackButtonTitlePositionAdjustment(UIOffset(horizontal: CGFloat(((sliderX.value * 2.0) - 1) * 10), vertical: CGFloat(((sliderY.value * 2.0) - 1) * 10)), for: UIBarMetrics.default)
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+        let backBarButtton = UIBarButtonItem(title: "Edited Back", style: .plain, target: nil, action: nil)
+        backBarButtton.setBackButtonTitlePositionAdjustment(UIOffset(horizontal: CGFloat(((sliderX.value * 2.0) - 1) * 10), vertical: CGFloat(((sliderY.value * 2.0) - 1) * 10)), for: .default)
+        backBarButtton.setTitlePositionAdjustment(UIOffset(horizontal: CGFloat(((sliderX.value * 2.0) - 1) * 10), vertical: CGFloat(((sliderY.value * 2.0) - 1) * 10)), for: .default)
         
-
-        // For Back button customization, setup the custom image for UINavigationBar inside CustomBackButtonNavController.
-        let backButtonBackgroundImage = UIImage(systemName: "list.bullet")
-        let barAppearance =
-            UINavigationBar.appearance(whenContainedInInstancesOf: [CustomBackButtonNavController.self])
-        barAppearance.backIndicatorImage = backButtonBackgroundImage
-        barAppearance.backIndicatorTransitionMaskImage = backButtonBackgroundImage
-
+        if self.navigationController?.children.count ?? 1 < 2 { return }
         
+        self.navigationController?.children[(self.navigationController?.children.count ?? 0) - 2].navigationItem.backBarButtonItem = backBarButtton
     }
 
 }

@@ -23,6 +23,7 @@
 		68A79CB623FBB74F00840AE7 /* CGRect+InitWithCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CAF23FBB74F00840AE7 /* CGRect+InitWithCorners.swift */; };
 		68A79CB723FBB74F00840AE7 /* CGRect+Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CB023FBB74F00840AE7 /* CGRect+Insets.swift */; };
 		68A79CB823FBB74F00840AE7 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CB123FBB74F00840AE7 /* CornerView.swift */; };
+		68A79CBB23FBE65D00840AE7 /* NavigationSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CBA23FBE65D00840AE7 /* NavigationSizeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		68A79CAF23FBB74F00840AE7 /* CGRect+InitWithCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+InitWithCorners.swift"; sourceTree = "<group>"; };
 		68A79CB023FBB74F00840AE7 /* CGRect+Insets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Insets.swift"; sourceTree = "<group>"; };
 		68A79CB123FBB74F00840AE7 /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
+		68A79CBA23FBE65D00840AE7 /* NavigationSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSizeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				681A178F23FAA07E00C54C4F /* Main.storyboard */,
 				681A17B923FAA1CB00C54C4F /* NavigationBarMoveViewController.swift */,
 				681A17BB23FAA64500C54C4F /* NavigationCustomBackButtonViewController.swift */,
+				68A79CBA23FBE65D00840AE7 /* NavigationSizeViewController.swift */,
 				681A179223FAA08000C54C4F /* Assets.xcassets */,
 				681A179423FAA08000C54C4F /* LaunchScreen.storyboard */,
 				681A179723FAA08000C54C4F /* Info.plist */,
@@ -311,6 +314,7 @@
 				681A178E23FAA07E00C54C4F /* ViewController.swift in Sources */,
 				681A17BC23FAA64500C54C4F /* NavigationCustomBackButtonViewController.swift in Sources */,
 				681A178A23FAA07E00C54C4F /* AppDelegate.swift in Sources */,
+				68A79CBB23FBE65D00840AE7 /* NavigationSizeViewController.swift in Sources */,
 				68A79CB623FBB74F00840AE7 /* CGRect+InitWithCorners.swift in Sources */,
 				68A79CB823FBB74F00840AE7 /* CornerView.swift in Sources */,
 				681A178C23FAA07E00C54C4F /* SceneDelegate.swift in Sources */,

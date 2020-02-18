@@ -16,23 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        window = {
-            if #available(iOS 11, *) {
-                let notch = NotchKitWindow(frame: UIScreen.main.bounds)
-                notch.maskedEdges = [.top]
-                return notch
-            } else {
-                return UIWindow()
-            }
-        }()
-        
-        let nav = UINavigationController()
-        let rootViewController = ViewController()
-        nav.addChild(rootViewController)
-        window?.rootViewController = nav
-        window?.backgroundColor = .black
-        window?.makeKeyAndVisible()
-        
         return true
     }
 

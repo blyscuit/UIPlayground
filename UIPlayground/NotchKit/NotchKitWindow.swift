@@ -177,14 +177,25 @@ open class NotchKitWindow: UIWindow {
         addSubview(statusLabel)
         statusLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            statusLabel.topAnchor.constraint(equalTo: safeView.topAnchor,constant: 100),
+            statusLabel.topAnchor.constraint(equalTo: safeView.topAnchor,constant: 0),
             statusLabel.leftAnchor.constraint(equalTo: safeView.leftAnchor),
             statusLabel.rightAnchor.constraint(equalTo: safeView.rightAnchor)
         ])
-        statusLabel.textAlignment = .center
-        statusLabel.font = UIFont.systemFont(ofSize: 12)
+        statusLabel.textAlignment = .left
+        statusLabel.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         statusLabel.textColor = .black
-        statusLabel.text = "12:50 PM"
+        statusLabel.text = " This is a long status bar          do something to hide it"
+        
+        addSubview(switc)
+        switc.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            switc.topAnchor.constraint(equalTo: bottomAnchor,constant: -40),
+            switc.leftAnchor.constraint(equalTo: safeView.leftAnchor, constant: 10),
+            switc.rightAnchor.constraint(equalTo: safeView.rightAnchor, constant: -10)
+        ])
+        switc.selectedSegmentIndex = 0
+        switc.addTarget(self, action: #selector(toggleSize), for: .valueChanged)
+        switc.backgroundColor = .systemBackground
     }
     
     deinit {
@@ -287,10 +298,16 @@ open class NotchKitWindow: UIWindow {
     }
     
     private let statusLabel = UILabel()
+    private let switc = UISegmentedControl(items: ["iPhone X","iPhone 8"])
 
     open override func makeKeyAndVisible() {
         super.makeKeyAndVisible()
         bringSubviewToFront(statusLabel)
+        bringSubviewToFront(switc)
+    }
+    
+    @objc private func toggleSize() {
+        maskedEdges = switc.selectedSegmentIndex == 1 ? [.top,.left,.right,.bottom] : []
     }
 }
 

@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = { () -> UIWindow in
             if #available(iOS 11, *) {
                 let notch = NotchKitWindow(windowScene: scene)
-                notch.maskedEdges = [.top]
+                notch.maskedEdges = []
                 return notch
             } else {
                 return UIWindow(windowScene: scene)
@@ -32,6 +32,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let vc = storyboard.instantiateViewController(withIdentifier: "MainVC") as UIViewController
         window.rootViewController = vc
         self.window = window
+        self.window?.tintColor = UIColor(red:0.02, green:0.90, blue:0.80, alpha:1.0)
         window.makeKeyAndVisible()
     }
 
