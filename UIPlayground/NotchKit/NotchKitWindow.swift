@@ -102,6 +102,7 @@ open class NotchKitWindow: UIWindow {
         setup()
     }
     
+    @available(iOS 13, *)
     public override init(windowScene: UIWindowScene) {
         super.init(windowScene: windowScene)
         setup()

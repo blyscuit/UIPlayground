@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MainVC") as UIViewController
+        let vc = storyboard.instantiateInitialViewController()
         window.rootViewController = vc
         self.window = window
         self.window?.tintColor = UIColor(red:0.02, green:0.90, blue:0.80, alpha:1.0)

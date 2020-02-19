@@ -24,6 +24,9 @@
 		68A79CB723FBB74F00840AE7 /* CGRect+Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CB023FBB74F00840AE7 /* CGRect+Insets.swift */; };
 		68A79CB823FBB74F00840AE7 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CB123FBB74F00840AE7 /* CornerView.swift */; };
 		68A79CBB23FBE65D00840AE7 /* NavigationSizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CBA23FBE65D00840AE7 /* NavigationSizeViewController.swift */; };
+		68A79CE423FCFF9700840AE7 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CE323FCFF9700840AE7 /* MainTableViewController.swift */; };
+		68A79CE623FD206300840AE7 /* TabbarCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CE523FD206300840AE7 /* TabbarCustomViewController.swift */; };
+		68A79CE823FD4C8D00840AE7 /* ModalityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CE723FD4C8D00840AE7 /* ModalityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		68A79CB023FBB74F00840AE7 /* CGRect+Insets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Insets.swift"; sourceTree = "<group>"; };
 		68A79CB123FBB74F00840AE7 /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		68A79CBA23FBE65D00840AE7 /* NavigationSizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSizeViewController.swift; sourceTree = "<group>"; };
+		68A79CE323FCFF9700840AE7 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		68A79CE523FD206300840AE7 /* TabbarCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCustomViewController.swift; sourceTree = "<group>"; };
+		68A79CE723FD4C8D00840AE7 /* ModalityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +128,12 @@
 				681A178B23FAA07E00C54C4F /* SceneDelegate.swift */,
 				681A178D23FAA07E00C54C4F /* ViewController.swift */,
 				681A178F23FAA07E00C54C4F /* Main.storyboard */,
+				68A79CE323FCFF9700840AE7 /* MainTableViewController.swift */,
 				681A17B923FAA1CB00C54C4F /* NavigationBarMoveViewController.swift */,
 				681A17BB23FAA64500C54C4F /* NavigationCustomBackButtonViewController.swift */,
 				68A79CBA23FBE65D00840AE7 /* NavigationSizeViewController.swift */,
+				68A79CE523FD206300840AE7 /* TabbarCustomViewController.swift */,
+				68A79CE723FD4C8D00840AE7 /* ModalityViewController.swift */,
 				681A179223FAA08000C54C4F /* Assets.xcassets */,
 				681A179423FAA08000C54C4F /* LaunchScreen.storyboard */,
 				681A179723FAA08000C54C4F /* Info.plist */,
@@ -312,14 +321,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				681A178E23FAA07E00C54C4F /* ViewController.swift in Sources */,
+				68A79CE423FCFF9700840AE7 /* MainTableViewController.swift in Sources */,
 				681A17BC23FAA64500C54C4F /* NavigationCustomBackButtonViewController.swift in Sources */,
 				681A178A23FAA07E00C54C4F /* AppDelegate.swift in Sources */,
+				68A79CE623FD206300840AE7 /* TabbarCustomViewController.swift in Sources */,
 				68A79CBB23FBE65D00840AE7 /* NavigationSizeViewController.swift in Sources */,
 				68A79CB623FBB74F00840AE7 /* CGRect+InitWithCorners.swift in Sources */,
 				68A79CB823FBB74F00840AE7 /* CornerView.swift in Sources */,
 				681A178C23FAA07E00C54C4F /* SceneDelegate.swift in Sources */,
 				68A79CB323FBB74F00840AE7 /* Corner.swift in Sources */,
 				68A79CB423FBB74F00840AE7 /* NotchKitWindow.swift in Sources */,
+				68A79CE823FD4C8D00840AE7 /* ModalityViewController.swift in Sources */,
 				68A79CB523FBB74F00840AE7 /* CGRect+Corners.swift in Sources */,
 				681A17BA23FAA1CB00C54C4F /* NavigationBarMoveViewController.swift in Sources */,
 				68A79CB723FBB74F00840AE7 /* CGRect+Insets.swift in Sources */,

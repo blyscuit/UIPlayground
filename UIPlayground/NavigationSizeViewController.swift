@@ -17,7 +17,7 @@ class CustomNavigationViewController: UINavigationController {
         let view = GradientView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.endColor = UIColor.white
-        view.startColor = UIColor(red:0.02, green:0.90, blue:0.80, alpha:1.0)
+        view.startColor = UIColor(red:0.00, green:0.15, blue:0.79, alpha:1.0)
         self.view.insertSubview(view, belowSubview: navigationBar)
         gradientHeight = view.heightAnchor.constraint(equalToConstant: 100)
         NSLayoutConstraint.activate([
@@ -36,17 +36,17 @@ class CustomNavigationViewController: UINavigationController {
     }
 }
 
-class NavigationSizeViewController: UIViewController {
+class NavigationSizeViewController: ViewController {
     @IBOutlet weak var sliderY: UISlider!
+    @IBOutlet weak var shadowSwitch: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
         
         sliderY.addTarget(self, action: #selector(slider1Move(_:)), for: .valueChanged)
-        
+        shadowSwitch.addTarget(self, action: #selector(toggleShadow(_:)), for: .valueChanged)
+
         title = "Custom Nav"
     }
     
@@ -55,6 +55,11 @@ class NavigationSizeViewController: UIViewController {
         let bounds = self.navigationController!.navigationBar.bounds
         self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: height)
         (self.navigationController as? CustomNavigationViewController)?.resizeBar(height: height)
+    }
+    
+    @IBAction func toggleShadow(_ sender: Any) {
+        self.navigationController?.navigationBar.setBackgroundImage(shadowSwitch.selectedSegmentIndex == 2 ? UIImage() : nil, for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = shadowSwitch.selectedSegmentIndex == 0 ? nil : UIImage()
     }
 }
 

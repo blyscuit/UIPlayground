@@ -22,7 +22,7 @@ class CustomBackButtonNavController: UINavigationController {
     }
 }
 
-class NavigationCustomBackButtonViewController: UIViewController {
+class NavigationCustomBackButtonViewController: ViewController {
     @IBOutlet weak var sliderY: UISlider!
     @IBOutlet weak var sliderX: UISlider!
 

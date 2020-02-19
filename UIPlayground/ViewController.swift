@@ -12,9 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        if navigationController?.children.count ?? 0 < 2 {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(close(_:)))
+        }
     }
-
+    
+    @IBAction func close(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }
 
