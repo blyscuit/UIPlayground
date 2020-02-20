@@ -9,8 +9,8 @@
 import UIKit
 
 enum MainMenu {
-    case nav, tab, modality
-    static var all = [MainMenu.nav, MainMenu.tab, MainMenu.modality]
+    case nav, tab, modality, search, safeArea
+    static var all = [MainMenu.safeArea, MainMenu.nav, MainMenu.tab, MainMenu.modality, MainMenu.search]
     func title() -> String {
         switch self {
         case .nav :
@@ -19,6 +19,10 @@ enum MainMenu {
             return "Tab Bar"
         case .modality:
             return "Modality"
+        case .search:
+            return "Search View"
+        case .safeArea:
+            return "Safe Area"
         }
     }
     func segue() -> String {
@@ -29,6 +33,10 @@ enum MainMenu {
             return "tab"
         case .modality:
             return "modal"
+        case .search:
+            return "search"
+        case .safeArea:
+            return "safeArea"
         }
     }
 }
