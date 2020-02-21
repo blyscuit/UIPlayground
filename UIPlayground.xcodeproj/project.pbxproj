@@ -20,6 +20,8 @@
 		6888DBC623FE849700A37427 /* NavigationLargeTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6888DBC523FE849700A37427 /* NavigationLargeTitleViewController.swift */; };
 		6888DBC823FE975200A37427 /* SearchHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6888DBC723FE975200A37427 /* SearchHomeViewController.swift */; };
 		6888DBCA23FE97B300A37427 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6888DBC923FE97B300A37427 /* SearchResultViewController.swift */; };
+		6888DC0823FF9F2F00A37427 /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6888DC0723FF9F2F00A37427 /* TransitionViewController.swift */; };
+		6888DC0A23FFCAFC00A37427 /* StatusBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6888DC0923FFCAFC00A37427 /* StatusBarViewController.swift */; };
 		68A79CB323FBB74F00840AE7 /* Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CAB23FBB74F00840AE7 /* Corner.swift */; };
 		68A79CB423FBB74F00840AE7 /* NotchKitWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CAC23FBB74F00840AE7 /* NotchKitWindow.swift */; };
 		68A79CB523FBB74F00840AE7 /* CGRect+Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A79CAE23FBB74F00840AE7 /* CGRect+Corners.swift */; };
@@ -69,6 +71,8 @@
 		6888DBC523FE849700A37427 /* NavigationLargeTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLargeTitleViewController.swift; sourceTree = "<group>"; };
 		6888DBC723FE975200A37427 /* SearchHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHomeViewController.swift; sourceTree = "<group>"; };
 		6888DBC923FE97B300A37427 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		6888DC0723FF9F2F00A37427 /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
+		6888DC0923FFCAFC00A37427 /* StatusBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarViewController.swift; sourceTree = "<group>"; };
 		68A79CAB23FBB74F00840AE7 /* Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Corner.swift; sourceTree = "<group>"; };
 		68A79CAC23FBB74F00840AE7 /* NotchKitWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotchKitWindow.swift; sourceTree = "<group>"; };
 		68A79CAE23FBB74F00840AE7 /* CGRect+Corners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Corners.swift"; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				68A79CE723FD4C8D00840AE7 /* ModalityViewController.swift */,
 				6888DBC723FE975200A37427 /* SearchHomeViewController.swift */,
 				6888DBC923FE97B300A37427 /* SearchResultViewController.swift */,
+				6888DC0723FF9F2F00A37427 /* TransitionViewController.swift */,
+				6888DC0923FFCAFC00A37427 /* StatusBarViewController.swift */,
 				681A179223FAA08000C54C4F /* Assets.xcassets */,
 				681A179423FAA08000C54C4F /* LaunchScreen.storyboard */,
 				681A179723FAA08000C54C4F /* Info.plist */,
@@ -329,9 +335,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6888DC0823FF9F2F00A37427 /* TransitionViewController.swift in Sources */,
 				681A178E23FAA07E00C54C4F /* ViewController.swift in Sources */,
 				68A79CE423FCFF9700840AE7 /* MainTableViewController.swift in Sources */,
 				681A17BC23FAA64500C54C4F /* NavigationCustomBackButtonViewController.swift in Sources */,
+				6888DC0A23FFCAFC00A37427 /* StatusBarViewController.swift in Sources */,
 				681A178A23FAA07E00C54C4F /* AppDelegate.swift in Sources */,
 				68A79CE623FD206300840AE7 /* TabbarCustomViewController.swift in Sources */,
 				6888DBC823FE975200A37427 /* SearchHomeViewController.swift in Sources */,

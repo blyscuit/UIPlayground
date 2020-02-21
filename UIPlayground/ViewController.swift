@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         if navigationController?.children.count ?? 0 < 2 {
             navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(close(_:)))
+        }
+        
+        //Photos
+        let photos = PHPhotoLibrary.authorizationStatus()
+        if photos == .notDetermined {
+            PHPhotoLibrary.requestAuthorization({status in
+                if status == .authorized{
+//                    ...
+                } else {}
+            })
         }
     }
     

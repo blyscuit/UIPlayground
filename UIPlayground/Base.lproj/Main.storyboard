@@ -53,7 +53,7 @@
         <!--View Controller-->
         <scene sceneID="948-EG-cK5">
             <objects>
-                <viewController id="NsL-PN-1CU" sceneMemberID="viewController">
+                <viewController id="NsL-PN-1CU" customClass="ViewController" customModule="UIPlayground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eed-k7-wpr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,6 +174,8 @@ Mauris aliquam congue cursus. Donec elit enim, eleifend a fermentum vitae, fauci
                         <segue destination="TR4-nJ-KIw" kind="presentation" identifier="modal" modalPresentationStyle="fullScreen" id="HGb-m2-YwQ"/>
                         <segue destination="tAk-nW-8UX" kind="modal" identifier="search" modalPresentationStyle="fullScreen" id="AwS-1W-b8m"/>
                         <segue destination="KVQ-Q0-P1D" kind="presentation" identifier="safeArea" modalPresentationStyle="overFullScreen" id="bAZ-3P-Dcg"/>
+                        <segue destination="Fra-UU-0DK" kind="presentation" identifier="transition" modalPresentationStyle="fullScreen" id="yGn-of-emv"/>
+                        <segue destination="RYy-nN-Psa" kind="presentation" identifier="status" modalPresentationStyle="fullScreen" id="DUN-yx-K3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTS-ML-YSZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -942,6 +944,23 @@ Mauris aliquam congue cursus. Donec elit enim, eleifend a fermentum vitae, fauci
             </objects>
             <point key="canvasLocation" x="391" y="2368"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DUx-vz-c0t">
+            <objects>
+                <navigationController id="Fra-UU-0DK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yo2-Wm-7aO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gq6-3M-YLD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Iqu-Vk-KbP" kind="relationship" relationship="rootViewController" id="09V-8L-70y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFQ-bX-bLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368" y="3112"/>
+        </scene>
         <!--Search Result View Controller-->
         <scene sceneID="Gc0-oq-WsR">
             <objects>
@@ -1271,7 +1290,7 @@ Mauris aliquam congue cursus. Donec elit enim, eleifend a fermentum vitae, fauci
         <!--View Controller-->
         <scene sceneID="THd-Wv-B7q">
             <objects>
-                <viewController id="2Hw-Kr-o38" sceneMemberID="viewController">
+                <viewController id="2Hw-Kr-o38" customClass="ViewController" customModule="UIPlayground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CAn-a0-Rlm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1364,6 +1383,146 @@ Mauris aliquam congue cursus. Donec elit enim, eleifend a fermentum vitae, fauci
             </objects>
             <point key="canvasLocation" x="390" y="-1281"/>
         </scene>
+        <!--Transition View Controller-->
+        <scene sceneID="9eG-5w-Q3K">
+            <objects>
+                <viewController id="Iqu-Vk-KbP" customClass="TransitionViewController" customModule="UIPlayground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rBE-0Z-3Ww">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jku-mB-V7h">
+                                <rect key="frame" x="0.0" y="375" width="414" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dIq-8m-bpl">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hF4-uk-hKl">
+                                                <rect key="frame" x="0.0" y="0.0" width="192" height="85"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Slide"/>
+                                                <connections>
+                                                    <segue destination="Iqu-Vk-KbP" kind="show" id="2qM-I5-rz5">
+                                                        <segue key="commit" inheritsFrom="parent" id="jdz-iD-OOe"/>
+                                                        <segue key="preview" inheritsFrom="commit" id="XsP-9M-72G"/>
+                                                    </segue>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSH-L7-bmw">
+                                                <rect key="frame" x="222" y="0.0" width="192" height="85"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Vertical"/>
+                                                <connections>
+                                                    <segue destination="Fra-UU-0DK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="fwK-xi-tLx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="jCa-au-LFD">
+                                        <rect key="frame" x="0.0" y="115" width="414" height="85"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1X-L7-hFp">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="85"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Cross Dissolve"/>
+                                                <connections>
+                                                    <segue destination="Fra-UU-0DK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Zqb-1p-cMI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGG-DG-q67">
+                                                <rect key="frame" x="148" y="0.0" width="118" height="85"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Curl"/>
+                                                <connections>
+                                                    <segue destination="Fra-UU-0DK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="Zu8-SI-17e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AhO-eW-DhZ">
+                                                <rect key="frame" x="296" y="0.0" width="118" height="85"/>
+                                                <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Flip"/>
+                                                <connections>
+                                                    <segue destination="Fra-UU-0DK" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="uxY-ML-HJo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5Py-bu-mvV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b6Y-gu-aZR" firstAttribute="trailing" secondItem="jku-mB-V7h" secondAttribute="trailing" id="52y-cV-iw2"/>
+                            <constraint firstItem="jku-mB-V7h" firstAttribute="leading" secondItem="b6Y-gu-aZR" secondAttribute="leading" id="Ilp-iZ-OzP"/>
+                            <constraint firstItem="jku-mB-V7h" firstAttribute="centerY" secondItem="b6Y-gu-aZR" secondAttribute="centerY" id="gP6-Hr-Pr4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b6Y-gu-aZR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="H5S-di-RLj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UDl-AC-Xd1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="3112"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UWv-2S-5Xu">
+            <objects>
+                <navigationController id="RYy-nN-Psa" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jDQ-et-T3E"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y3y-hH-kj2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="h6t-i4-X9s" kind="relationship" relationship="rootViewController" id="zLm-4i-Xpq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VhF-eN-YWf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-397" y="3903"/>
+        </scene>
+        <!--Status Bar View Controller-->
+        <scene sceneID="hFc-cr-C7i">
+            <objects>
+                <viewController id="h6t-i4-X9s" customClass="StatusBarViewController" customModule="UIPlayground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aEP-PK-K3e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gzy-LR-AGU">
+                                <rect key="frame" x="131" y="432.5" width="152" height="32"/>
+                                <segments>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                    <segment title="Hide"/>
+                                </segments>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navbarPattern" translatesAutoresizingMaskIntoConstraints="NO" id="xbm-au-05c">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xbm-au-05c" firstAttribute="top" secondItem="aEP-PK-K3e" secondAttribute="top" id="44F-7k-EgS"/>
+                            <constraint firstItem="Gzy-LR-AGU" firstAttribute="centerX" secondItem="aEP-PK-K3e" secondAttribute="centerX" id="VVw-1B-oTO"/>
+                            <constraint firstItem="xbm-au-05c" firstAttribute="leading" secondItem="smS-zW-dN6" secondAttribute="leading" id="c4g-0w-xC0"/>
+                            <constraint firstItem="smS-zW-dN6" firstAttribute="trailing" secondItem="xbm-au-05c" secondAttribute="trailing" id="fGx-pe-tWP"/>
+                            <constraint firstItem="Gzy-LR-AGU" firstAttribute="centerY" secondItem="aEP-PK-K3e" secondAttribute="centerY" id="ktR-Az-KZU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="smS-zW-dN6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2jk-B8-Cll"/>
+                    <connections>
+                        <outlet property="segment" destination="Gzy-LR-AGU" id="XXJ-PW-Vzg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYz-uX-GTH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="3903"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.down.to.line.alt" catalog="system" width="54" height="64"/>
@@ -1376,6 +1535,7 @@ Mauris aliquam congue cursus. Donec elit enim, eleifend a fermentum vitae, fauci
         <image name="doc.on.doc" catalog="system" width="58" height="64"/>
         <image name="exclamationmark.bubble.fill" catalog="system" width="64" height="54"/>
         <image name="icoPromotionInactiveTab" width="26" height="26"/>
+        <image name="navbarPattern" width="375" height="76"/>
         <image name="paperplane.fill" catalog="system" width="64" height="60"/>
         <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
         <image name="square.split.1x2" catalog="system" width="64" height="56"/>
@@ -1385,6 +1545,7 @@ Mauris aliquam congue cursus. Donec elit enim, eleifend a fermentum vitae, fauci
         <image name="tray.fill" catalog="system" width="64" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="yGn-of-emv"/>
         <segue reference="skX-7v-lAh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.019607843137254902" green="0.89803921568627454" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
