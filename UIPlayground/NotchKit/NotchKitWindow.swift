@@ -189,8 +189,10 @@ open class NotchKitWindow: UIWindow {
         
         addSubview(switc)
         switc.translatesAutoresizingMaskIntoConstraints = false
+        
+        swittchBottomConstraint = switc.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -40)
         NSLayoutConstraint.activate([
-            switc.topAnchor.constraint(equalTo: bottomAnchor,constant: -40),
+            (swittchBottomConstraint ?? switc.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -40)),
             switc.leftAnchor.constraint(equalTo: safeView.leftAnchor, constant: 10),
             switc.rightAnchor.constraint(equalTo: safeView.rightAnchor, constant: -10)
         ])
@@ -276,6 +278,7 @@ open class NotchKitWindow: UIWindow {
         let duration = animated ? 0.3 : 0
         
         UIView.animate(withDuration: duration) { [unowned self] in
+            self.swittchBottomConstraint?.constant = (self.maskedEdges.contains(.bottom) ? -30 : 0) +  -20
             self.safeView.frame = safeViewFrame
             self.safeView.layoutIfNeeded()
             self.updateStatusBar(animated: animated)
@@ -300,6 +303,7 @@ open class NotchKitWindow: UIWindow {
     
     private let statusLabel = UILabel()
     private let switc = UISegmentedControl(items: ["iPhone X","iPhone 8"])
+    private var swittchBottomConstraint: NSLayoutConstraint?
 
     open override func makeKeyAndVisible() {
         super.makeKeyAndVisible()

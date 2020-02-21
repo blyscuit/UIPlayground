@@ -1254,7 +1254,7 @@ Mauris aliquam congue cursus. Donec elit enim, eleifend a fermentum vitae, fauci
         <scene sceneID="y39-Sg-fzh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vx4-mo-ejc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Safe" id="T88-3b-KEY"/>
+                    <tabBarItem key="tabBarItem" title="Safe" image="doc.plaintext" catalog="system" id="T88-3b-KEY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W9R-gQ-Vax">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1368,7 +1368,7 @@ Mauris aliquam congue cursus. Donec elit enim, eleifend a fermentum vitae, fauci
         <scene sceneID="xhC-aO-vPD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="46m-8k-xex" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Super" id="gkq-To-jn4"/>
+                    <tabBarItem key="tabBarItem" title="Super" image="text.justify" catalog="system" id="gkq-To-jn4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zdm-dT-Ouw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1533,6 +1533,7 @@ Mauris aliquam congue cursus. Donec elit enim, eleifend a fermentum vitae, fauci
         <image name="chevron.up" catalog="system" width="64" height="36"/>
         <image name="doc.on.clipboard" catalog="system" width="58" height="64"/>
         <image name="doc.on.doc" catalog="system" width="58" height="64"/>
+        <image name="doc.plaintext" catalog="system" width="56" height="64"/>
         <image name="exclamationmark.bubble.fill" catalog="system" width="64" height="54"/>
         <image name="icoPromotionInactiveTab" width="26" height="26"/>
         <image name="navbarPattern" width="375" height="76"/>
@@ -1540,6 +1541,7 @@ Mauris aliquam congue cursus. Donec elit enim, eleifend a fermentum vitae, fauci
         <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
         <image name="square.split.1x2" catalog="system" width="64" height="56"/>
         <image name="t.bubble" catalog="system" width="64" height="54"/>
+        <image name="text.justify" catalog="system" width="64" height="50"/>
         <image name="textbox" catalog="system" width="64" height="44"/>
         <image name="tray.and.arrow.up.fill" catalog="system" width="64" height="56"/>
         <image name="tray.fill" catalog="system" width="64" height="44"/>
